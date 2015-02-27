@@ -126,3 +126,11 @@ module public Api =
 
         let GetUpcoming() = 
             Providers.DVDs.Upcoming.Load(newReleasesUrl)
+    
+    module Typed =
+        
+        module Movies =
+            
+            let GetBoxOffice() =
+                let movies = Movies.GetBoxOffice().Movies
+                movies |> Seq.map(fun m -> )

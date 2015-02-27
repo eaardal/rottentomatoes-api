@@ -12,4 +12,4 @@ open RottenTomatoesApi.Models
 type MainWindowViewModel() =
     inherit ViewModelBase()
 
-      member x.Movies with get () = Api.Movies.GetBoxOffice().Movies |> Seq.map(fun m -> { Name = m.Title; Year = m.Year })
+      member x.Movies with get () = Api.Movies.GetBoxOffice().Movies |> Seq.map(fun m -> { Name = m.Title; Year = m.Year; Poster = m.Posters.Original })

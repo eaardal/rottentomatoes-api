@@ -3,6 +3,28 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="RottenTomatoes API" Height="450" Width="500">
     <Grid>
-        <DataGrid ItemsSource="{Binding Path=Movies}"></DataGrid>
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <ItemsControl ItemsSource="{Binding Path=Movies}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Grid.Column="1"  Text="{Binding Path=Name}" VerticalAlignment="Center" HorizontalAlignment="Left"
+                                   FontSize="16" Margin="10"></TextBlock>
+                            <Image Grid.Column="0"  Source="{Binding Path=Poster}" Margin="15"></Image>
+                        </Grid>
+
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
     </Grid>
 </Window>
