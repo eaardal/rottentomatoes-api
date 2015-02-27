@@ -1,4 +1,4 @@
-﻿namespace RottenTomatoesApi
+﻿namespace RottenTomatoesApi.ConsoleClient
 
 open System
 open RottenTomatoesApi

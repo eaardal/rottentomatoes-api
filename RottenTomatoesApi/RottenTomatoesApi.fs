@@ -1,10 +1,9 @@
 ﻿namespace RottenTomatoesApi
 
 open System
-open RestSharp
 open FSharp.Data
 
-module Api =
+module public Api =
 
     [<Literal>]
     let private apiKey = "9jxtafnnd4kd87hp8n9rkbw7"
