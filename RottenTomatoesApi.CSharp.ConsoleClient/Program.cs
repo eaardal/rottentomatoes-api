@@ -10,13 +10,8 @@ namespace RottenTomatoesApi.CSharp.ConsoleClient
     {
         static void Main(string[] args)
         {
-            var releases = Api.GetNewReleases();
-            Console.WriteLine(releases);
-
-            //var titles = Wrapper.GetNewReleaseTitles();
-
-            //titles.ToList().ForEach(Console.WriteLine);
-
+            var office = Api.Movies.GetBoxOffice();
+            
             Console.ReadLine();
         }
     }
