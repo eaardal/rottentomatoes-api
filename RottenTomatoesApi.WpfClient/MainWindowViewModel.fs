@@ -3,13 +3,25 @@
 open System
 open System.Collections.ObjectModel
 open System.Windows
+open System.Diagnostics
 open System.Windows.Data
 open System.Windows.Input
 open System.ComponentModel
 open RottenTomatoesApi
 open RottenTomatoesApi.Models
 
-type MainWindowViewModel() =
-    inherit ViewModelBase()
+type DataSources = MoviesBoxOffice | MoviesInTheater | MoviesOpening | MoviesUpcoming
 
-      member x.Movies with get () = Api.Movies.GetBoxOffice().Movies |> Seq.map(fun m -> { Name = m.Title; Year = m.Year; Poster = m.Posters.Original })
+type MainWindowViewModel() = 
+    inherit ViewModelBase()
+    
+    let movies = 
+        //let m = Api.Movies.GetBoxOffice() // |> Seq.iter(fun a -> a.)
+       
+        let m = Api.Typed.Movies.GetBoxOffice()
+        //m |> Seq.iter(fun m -> Debug.WriteLine m.CriticsConsensus)
+        m
+
+    member x.Movies = movies
+
+    

@@ -54,7 +54,6 @@
       <SubType>Designer</SubType>
     </Resource>
     <Resource Include="watermark.png" />
-    <Compile Include="Movie.fs" />
     <Compile Include="ConverterBase.fs" />
     <Compile Include="EventToCommand.fs" />
     <Compile Include="StringExistsToVisibilityConverter.fs" />

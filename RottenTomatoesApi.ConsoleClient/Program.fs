@@ -20,22 +20,22 @@ module App =
             Console.WriteLine "\n\n"
 
             Console.WriteLine "======= [ Box Office ] ======="
-            Api.Movies.GetBoxOffice().Movies |> Seq.iter(fun m -> Console.WriteLine m.Title)
+            Api.Movies.GetBoxOffice() |> Seq.iter(fun m -> Console.WriteLine m.Title)
               
             Console.WriteLine "\n\n"
 
             Console.WriteLine "======= [ In Theater ] ======="
-            Api.Movies.GetInTheater().Movies |> Seq.iter(fun m -> Console.WriteLine m.Title)
+            Api.Movies.GetInTheater() |> Seq.iter(fun m -> Console.WriteLine m.Title)
 
             Console.WriteLine "\n\n"
 
             Console.WriteLine "======= [ Opening ] ======="
-            Api.Movies.GetOpening().Movies |> Seq.iter(fun m -> Console.WriteLine m.Title)
+            Api.Movies.GetOpening() |> Seq.iter(fun m -> Console.WriteLine m.Title)
 
             Console.WriteLine "\n\n"
               
             Console.WriteLine "======= [ Upcoming ] ======="
-            Api.Movies.GetUpcoming().Movies |> Seq.iter(fun m -> Console.WriteLine m.Title)
+            Api.Movies.GetUpcoming() |> Seq.iter(fun m -> Console.WriteLine m.Title)
 
             Console.WriteLine "\n\n"
    
@@ -47,12 +47,12 @@ module App =
             Console.WriteLine "\n\n"
 
             Console.WriteLine "======= [ New Releases ] ======="
-            Api.DVDs.GetNewReleases().Movies |> Seq.iter(fun m -> Console.WriteLine m.Title)
+            Api.DVDs.GetNewReleases() |> Seq.iter(fun m -> Console.WriteLine m.Title)
 
             Console.WriteLine "\n\n"
 
             Console.WriteLine "======= [ Current Releases ] ======="
-            Api.DVDs.GetCurrentReleases().Movies |> Seq.iter(fun m -> Console.WriteLine m.Title)
+            Api.DVDs.GetCurrentReleases() |> Seq.iter(fun m -> Console.WriteLine m.Title)
 
             Console.WriteLine "\n\n"
 
